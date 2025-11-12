@@ -1,0 +1,20 @@
+# .safepush.yml
+
+ignore_paths:
+  - ".safepush.yml"
+  - "docs/**"
+  - "tests/**"
+
+ignore_patterns:
+  # Exact or regex-style patterns for known-safe values
+  - "AKIA_TEST_NOT_REAL"          # example fake AWS key
+  - "dummy_(key|secret)_.*"
+
+ignore_lines_with:
+  - "# safepush: ignore"
+
+allowlist_hashes:
+  # Example:
+  # - "sha256:<hash-of-known-safe-secret>"
+  # Used when you never want a specific value flagged, even if moved.
+  # Leave empty or omit if not needed.

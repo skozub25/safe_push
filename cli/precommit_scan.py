@@ -8,6 +8,7 @@ def get_staged_diff() -> str:
     return subprocess.check_output(cmd, text=True)
 
 def main():
+    print("Scanning for secrets in staged changes...")
     diff = get_staged_diff()
     findings: List[Finding] = []
 
