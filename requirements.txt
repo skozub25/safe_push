@@ -1,5 +1,2 @@
-# Replace any Stripe-like live key with a safe placeholder
-regex:sk_live_[0-9A-Za-z]{24,}==>SK_LIVE_TEST_PLACEHOLDER
-
-# Replace any AKIA-looking key with a safe placeholder
-regex:AKIA[0-9A-Z]{16}==>AKIA_TEST_PLACEHOLDER
+pytest
+pyyaml

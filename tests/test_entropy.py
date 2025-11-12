@@ -1,5 +1,3 @@
-# tests/test_entropy.py
-
 from scanner.entropy import shannon_entropy
 
 def test_entropy_empty_string():
@@ -14,7 +12,7 @@ def test_entropy_higher_for_varied_chars_than_repeated():
     assert e_mixed > e_repeat
 
 def test_entropy_secret_like_token_is_relatively_high():
-    token = "Z7xY6wV5uT4sR3qP2oN1mL0kJ9"  # long, mixed, uniformish
+    token = "Z7xY6wV5uT4sR3qP2oN1mL0kJ9"  # long, mixed, uniform-ish
     assert shannon_entropy(token) >= 4.0
 
 def test_entropy_ignores_character_order():

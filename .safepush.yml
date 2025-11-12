@@ -7,7 +7,7 @@ ignore_paths:
 
 ignore_patterns:
   # Exact or regex-style patterns for known-safe values
-  - "AKIA_TEST_NOT_REAL"          # example fake AWS key
+  - "AKIA_NOT_REAL_1234567890ABCDE1"       # example fake AWS key
   - "dummy_(key|secret)_.*"
 
 ignore_lines_with:

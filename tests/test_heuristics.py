@@ -1,4 +1,3 @@
-# tests/test_heuristics.py
 from scanner.core import scan_line
 
 def make_findings(line: str):
@@ -25,7 +24,6 @@ def test_high_entropy_without_sensitive_context_is_ignored():
     token = "Z7xY6wV5uT4sR3qP2oN1mL0kJ9"
     line = f'session_id = "{token}"'
     findings = make_findings(line)
-
     assert findings == []
 
 def test_short_token_in_sensitive_context_not_flagged():
